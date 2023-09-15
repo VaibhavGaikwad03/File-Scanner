@@ -44,10 +44,10 @@ int search_string(string file_path, string str)
         if (strstr(file_data[counter].c_str(), str.c_str()))
             return 1; // string found
     }
-    return 0; // sting not found
+    return 0; // string not found
 }
 
-void list_files_by_extension(path absolute_path, string str)
+void search_string_from_files(path absolute_path, string str)
 {
     static bool flag = true;
     static ofstream note_file;
@@ -87,7 +87,7 @@ void list_files_by_extension(path absolute_path, string str)
             }
 
             if (is_directory(file_path.path()))                 // checking if the file if directory file or not
-                list_files_by_extension(file_path.path(), str); // if directory file then call list_file_by_extension recursively
+                search_string_from_files(file_path.path(), str); // if directory file then call list_file_by_extension recursively
         }
     }
     catch (const std::exception &e)
@@ -98,7 +98,7 @@ void list_files_by_extension(path absolute_path, string str)
 
 int main(int argc, char *argv[])
 {
-    list_files_by_extension(argv[1], argv[2]);
+    search_string_from_files(argv[1], argv[2]);
     // C:\\Users\\"Vaibhav Gaikwad"\\Desktop\\Traverse_File_System\\test
     return 0;
 }

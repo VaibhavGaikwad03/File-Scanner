@@ -17,11 +17,9 @@ void traverse_directory(path file_path)
     }
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    path file_path = "C:\\Users\\Vaibhav Gaikwad\\Desktop\\Traverse_File_System\\test";
-
-    traverse_directory(file_path);
+    traverse_directory(argv[1]);
 
     return 0;
 }
