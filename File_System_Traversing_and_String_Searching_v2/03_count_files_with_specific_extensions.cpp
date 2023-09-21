@@ -2,6 +2,7 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
+#include <string>
 #include <cstring>
 using std::cout;
 using std::endl;
