@@ -2,6 +2,7 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
+#include <string>
 #include <cstring>
 using std::cout;
 using std::endl;
@@ -53,10 +54,10 @@ int compare_extensions(const string file_name, const vector<string> &extensions)
         for (string extension : extensions)
         {
             if (!file_extension.compare(extension)) // compare the extension
-                return 1;
+                return 1;                           // true
         }
     }
-    return 0;
+    return 0; // false
 }
 
 int search_string(const string file_path, const string str)
