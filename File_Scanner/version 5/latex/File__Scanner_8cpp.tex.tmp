@@ -1,0 +1,160 @@
+\hypertarget{File__Scanner_8cpp}{}\doxysection{File\+\_\+\+Scanner.\+cpp File Reference}
+\label{File__Scanner_8cpp}\index{File\_Scanner.cpp@{File\_Scanner.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+Include dependency graph for File\+\_\+\+Scanner.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{File__Scanner_8cpp_a888029133fb95db6935bdf89541c2da4}{read\+\_\+config}} (const std\+::string \&config\+\_\+path, std\+::vector$<$ std\+::string $>$ \&extensions)
+\begin{DoxyCompactList}\small\item\em Read extensions from a configuration file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{File__Scanner_8cpp_aba8e4e646478ae0773bbd8961ca3d396}{traverse\+\_\+directory}} (const fs\+::path \&directory\+\_\+path, std\+::vector$<$ std\+::string $>$ \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Traverse a directory recursively and collect file paths. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{File__Scanner_8cpp_a623c54d53c76d9219224ffa49714ef1c}{compare\+\_\+extensions}} (const std\+::string \&file\+\_\+name, const std\+::vector$<$ std\+::string $>$ \&extensions)
+\begin{DoxyCompactList}\small\item\em Compare a file\textquotesingle{}s extension with a list of extensions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{File__Scanner_8cpp_af3b3dea7212faf2e27572f539fd29bd5}{search}} (const std\+::string \&file\+\_\+path, const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Search for a specific string in a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{File__Scanner_8cpp_a34466b64319b9bdf4f52f646da256313}{search\+\_\+string}} (const std\+::string \&directory\+\_\+path, const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Search for a specific string in files within a directory and its subdirectories. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{File__Scanner_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{File__Scanner_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Vaibhav Gaikwad (\href{mailto:im.vaibhavtg07@gmail.com}{\texttt{ im.\+vaibhavtg07@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{File__Scanner_8cpp_a623c54d53c76d9219224ffa49714ef1c}\label{File__Scanner_8cpp_a623c54d53c76d9219224ffa49714ef1c}} 
+\index{File\_Scanner.cpp@{File\_Scanner.cpp}!compare\_extensions@{compare\_extensions}}
+\index{compare\_extensions@{compare\_extensions}!File\_Scanner.cpp@{File\_Scanner.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_extensions()}{compare\_extensions()}}
+{\footnotesize\ttfamily bool compare\+\_\+extensions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{extensions }\end{DoxyParamCaption})}
+
+
+
+Compare a file\textquotesingle{}s extension with a list of extensions. 
+
+This function takes a file name and a list of extensions, and checks whether the file\textquotesingle{}s extension matches any of the extensions in the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The name of the file whose extension is to be compared. \\
+\hline
+{\em extensions} & A vector of strings containing the extensions to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the file extension matches any of the provided extensions, otherwise returns false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{File__Scanner_8cpp_a888029133fb95db6935bdf89541c2da4}\label{File__Scanner_8cpp_a888029133fb95db6935bdf89541c2da4}} 
+\index{File\_Scanner.cpp@{File\_Scanner.cpp}!read\_config@{read\_config}}
+\index{read\_config@{read\_config}!File\_Scanner.cpp@{File\_Scanner.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_config()}{read\_config()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$\& read\+\_\+config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+path,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{extensions }\end{DoxyParamCaption})}
+
+
+
+Read extensions from a configuration file. 
+
+This function reads extensions from the specified configuration file and appends them to the given vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+path} & The path to the configuration file. \\
+\hline
+{\em extensions} & A vector to store the extensions read from the config file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings containing file extensions.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Vaibhav Gaikwad 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{File__Scanner_8cpp_af3b3dea7212faf2e27572f539fd29bd5}\label{File__Scanner_8cpp_af3b3dea7212faf2e27572f539fd29bd5}} 
+\index{File\_Scanner.cpp@{File\_Scanner.cpp}!search@{search}}
+\index{search@{search}!File\_Scanner.cpp@{File\_Scanner.cpp}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily int search (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Search for a specific string in a file. 
+
+This function searches for a given string within the contents of a file specified by the file path. It returns whether the string is found in the file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & The path of the file to be searched. \\
+\hline
+{\em str} & The string to search for within the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if the string is found in the file, 0 if not found, and -\/1 if the file cannot be opened.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Vaibhav Gaikwad 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{File__Scanner_8cpp_a34466b64319b9bdf4f52f646da256313}\label{File__Scanner_8cpp_a34466b64319b9bdf4f52f646da256313}} 
+\index{File\_Scanner.cpp@{File\_Scanner.cpp}!search\_string@{search\_string}}
+\index{search\_string@{search\_string}!File\_Scanner.cpp@{File\_Scanner.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_string()}{search\_string()}}
+{\footnotesize\ttfamily void search\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory\+\_\+path,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Search for a specific string in files within a directory and its subdirectories. 
+
+This function searches for a given string within files located in a specified directory and its subdirectories. It uses a configuration file (\char`\"{}config.\+txt\char`\"{}) to determine the file extensions to search in, traverses the directory recursively, and saves paths of file containing the string to an output file (\char`\"{}\+Output.\+txt\char`\"{}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+\_\+path} & The path to the directory to search. \\
+\hline
+{\em str} & The string to search for within the files.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Vaibhav Gaikwad 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{File__Scanner_8cpp_aba8e4e646478ae0773bbd8961ca3d396}\label{File__Scanner_8cpp_aba8e4e646478ae0773bbd8961ca3d396}} 
+\index{File\_Scanner.cpp@{File\_Scanner.cpp}!traverse\_directory@{traverse\_directory}}
+\index{traverse\_directory@{traverse\_directory}!File\_Scanner.cpp@{File\_Scanner.cpp}}
+\doxysubsubsection{\texorpdfstring{traverse\_directory()}{traverse\_directory()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$\& traverse\+\_\+directory (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{directory\+\_\+path,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Traverse a directory recursively and collect file paths. 
+
+This function traverses the specified directory recursively and collects paths of all regular files found within it and its subdirectories.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+\_\+path} & The path to the directory to traverse. \\
+\hline
+{\em file\+\_\+path} & A vector to store the paths of the regular files found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Vaibhav Gaikwad 
+\end{DoxyAuthor}
