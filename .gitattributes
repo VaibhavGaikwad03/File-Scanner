@@ -1,4 +1,7 @@
 *.js linguist-detectable=false
 *.html linguist-detectable=false
 *.css linguist-detectable=false
-*.TeX linguist-detectable=false
+*.tex linguist-detectable=false
+*.tmp linguist-detectable=false
+*.dot linguist-detectable=false
+*.sty linguist-detectable=false
