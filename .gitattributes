@@ -1,7 +1,7 @@
-*.js linguist-detectable=.cpp
-*.html linguist-detectable=TypeScript
-*.css linguist-detectable=.cpp
-*.tex linguist-detectable=.cpp
-*.tmp linguist-detectable=.cpp
-*.dot linguist-detectable=.cpp
-*.sty linguist-detectable=.cpp
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.tex linguist-detectable=false
+*.tmp linguist-detectable=false
+*.dot linguist-detectable=false
+*.sty linguist-detectable=false
