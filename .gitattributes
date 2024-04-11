@@ -1,5 +1,5 @@
 *.js linguist-detectable=.cpp
-*.html linguist-detectable=.cpp
+*.html linguist-detectable=C++
 *.css linguist-detectable=.cpp
 *.tex linguist-detectable=.cpp
 *.tmp linguist-detectable=.cpp
