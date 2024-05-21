@@ -19,7 +19,7 @@ File Scanner is a multi-threaded file scanning utility that searches for specifi
 
 ## Files Description
 
-### `FileScanner.cpp`
+### `File_Scanner.cpp`
 
 Contains the implementation of the `FileScanner` class, which handles the file scanning process including:
 - Reading the configuration file for valid file extensions.
@@ -27,7 +27,11 @@ Contains the implementation of the `FileScanner` class, which handles the file s
 - Searching for the specified string within files.
 - Using a thread pool to manage concurrent tasks.
 
-### `ThreadPool.cpp`
+### `File_Scanner.h`
+
+Header file for the `FileScanner` class, defining its interface and member functions.
+
+### `Thread_Pool.cpp`
 
 Contains the implementation of the `ThreadPool` class, which manages a pool of worker threads to execute tasks concurrently. This helps in efficiently utilizing CPU resources for the file scanning process.
 
@@ -88,4 +92,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ---
 
-Thank you for using File Scanner! If you have any questions or feedback, please reach out via the project's issue tracker.
+Thank you for using File Scanner! For any questions or suggestions, please contact me at im.vaibhavtg07@gmail.com.
