@@ -67,7 +67,7 @@ Documentation file providing an overview of the project, setup instructions, and
 3. **Compile the program**  
    Open a terminal and run the following command to compile the program:
    ```sh
-   g++ ThreadPool.cpp FileScanner.cpp -o FileScanner
+   g++ ThreadPool.cpp FileScanner.cpp main.cpp -o FileScanner
    ```
 
 4. **Run the program**  
